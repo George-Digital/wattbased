@@ -1,0 +1,15 @@
+{
+  "name": "wattbased.com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Watt Based — portable power station database site.",
+  "scripts": {
+    "build": "node src/generate.mjs",
+    "dev": "node src/generate.mjs --watch",
+    "check": "node src/check.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
