@@ -43,13 +43,13 @@
     "offers": [
       {
         "retailer": "Anker",
-        "price": 649,
+        "price": 429.99,
         "url": "https://www.anker.com/products/a1761",
-        "capturedAt": "2026-06-11T12:00:00Z"
+        "capturedAt": "2026-06-11T22:33:55.323Z"
       }
     ],
-    "lowPrice": 649,
-    "dollarsPerWh": 0.6145833333333334,
+    "lowPrice": 429.99,
+    "dollarsPerWh": 0.40718750000000004,
     "whPerLb": 37.183098591549296,
     "trackingDays": 1
   },
@@ -97,13 +97,13 @@
     "offers": [
       {
         "retailer": "BLUETTI",
-        "price": 579,
+        "price": 499,
         "url": "https://www.bluettipower.com/products/ac180",
-        "capturedAt": "2026-06-11T12:00:00Z"
+        "capturedAt": "2026-06-11T22:33:55.323Z"
       }
     ],
-    "lowPrice": 579,
-    "dollarsPerWh": 0.5026041666666666,
+    "lowPrice": 499,
+    "dollarsPerWh": 0.4331597222222222,
     "whPerLb": 30.802139037433157,
     "trackingDays": 1
   },
@@ -124,13 +124,13 @@
     "offers": [
       {
         "retailer": "Goal Zero",
-        "price": 899,
+        "price": 999.95,
         "url": "https://www.goalzero.com/products/goal-zero-yeti-1000x-portable-power-station",
-        "capturedAt": "2026-06-11T12:00:00Z"
+        "capturedAt": "2026-06-11T22:33:55.323Z"
       }
     ],
-    "lowPrice": 899,
-    "dollarsPerWh": 0.9145473041709054,
+    "lowPrice": 999.95,
+    "dollarsPerWh": 1.0172431332655139,
     "whPerLb": 31.009463722397477,
     "trackingDays": 1
   }

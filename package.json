@@ -7,7 +7,9 @@
   "scripts": {
     "build": "node src/generate.mjs",
     "dev": "node src/generate.mjs --watch",
-    "check": "node src/check.mjs"
+    "check": "node src/check.mjs",
+    "price:scrape": "node pipeline/scrape-prices.mjs",
+    "price:scrape:update": "node pipeline/scrape-prices.mjs --update-products"
   },
   "engines": {
     "node": ">=20"

@@ -4,9 +4,21 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(root, 'dist');
+let observations = [];
+try { observations = JSON.parse(await readFile(path.join(root, 'data/price-observations.json'), 'utf8')); } catch {}
+const latestBySlug = new Map();
+for (const o of observations) {
+  const prev = latestBySlug.get(o.productSlug);
+  if (!prev || new Date(o.capturedAt) > new Date(prev.capturedAt)) latestBySlug.set(o.productSlug, o);
+}
 const products = JSON.parse(await readFile(path.join(root, 'data/products.json'), 'utf8')).map(enrich);
 
 function enrich(p){
+  const latest = latestBySlug.get(p.slug);
+  if (latest) {
+    p.offers = p.offers?.length ? p.offers : [{retailer: latest.retailer, url: latest.url}];
+    p.offers[0] = {...p.offers[0], retailer: latest.retailer, price: latest.price, url: latest.url, capturedAt: latest.capturedAt};
+  }
   const low = Math.min(...p.offers.map(o => o.price));
   return {
     ...p,
